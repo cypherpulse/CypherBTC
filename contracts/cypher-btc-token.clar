@@ -6,7 +6,7 @@
 
 (define-data-var total-supply uint u0)
 
-;; Transfer function
+;; Transfer function 
 ;; Parameters: amount (uint), sender (principal), recipient (principal)
 ;; Only the sender can initiate transfer on their behalf
 (define-public (transfer (amount uint) (sender principal) (recipient principal))
