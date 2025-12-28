@@ -38,13 +38,57 @@ The contract provides a minimal yet complete example of token functionality, inc
 | **Comprehensive Testing** | Full test suite with 100% coverage |
 | **Educational Focus** | Well-documented code with clear examples for learning Clarity |
 
-### Token Specifications
+---
 
-- **Name**: CypherBTC
-- **Symbol**: cBTC
-- **Decimals**: 6
-- **Supply**: Dynamic (increases via minting)
-- **Owner**: Contract deployer (set at deployment)
+## 🏗️ Architecture
+
+The CypherBTC Token project follows a modular architecture designed for the Stacks blockchain ecosystem:
+
+```mermaid
+graph TB
+    A[Clarinet Development Environment] --> B[Stacks Blockchain]
+    B --> C[CypherBTC Smart Contract]
+    C --> D[SIP-010 Token Standard]
+    
+    E[TypeScript Test Suite] --> F[Vitest Framework]
+    F --> G[Contract Testing]
+    
+    H[Deployment Scripts] --> I[Testnet/Mainnet]
+    I --> B
+    
+    J[NPM Scripts] --> K[Build & Test]
+    K --> L[Contract Validation]
+    
+    subgraph "Smart Contract Layer"
+        C
+        D
+    end
+    
+    subgraph "Testing Layer"
+        E
+        F
+        G
+    end
+    
+    subgraph "Deployment Layer"
+        H
+        I
+    end
+    
+    subgraph "Development Tools"
+        A
+        J
+        L
+    end
+```
+
+### Architecture Components
+
+- **Smart Contract**: Clarity-based SIP-010 compliant token contract
+- **Testing Framework**: TypeScript/Vitest for comprehensive contract testing
+- **Development Environment**: Clarinet for local blockchain simulation
+- **Deployment**: Network-specific configurations for testnet/mainnet
+- **Build System**: NPM scripts for testing and validation
 
 ---
 
